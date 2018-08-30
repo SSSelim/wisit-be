@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HealthCheckController {
 
-  @GetMapping
+  @GetMapping("/non-secured/up")
   public String up() {
     return "I am Wisit-Be application, up and running.";
   }
