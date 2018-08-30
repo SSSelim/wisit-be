@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 public class HealthCheckControllerIntTest extends AbstractControllerIntTest {
@@ -16,6 +17,7 @@ public class HealthCheckControllerIntTest extends AbstractControllerIntTest {
   @Test
   public void shouldBeUp() throws Exception {
     mockMvc.perform(get("/non-secured/up"))
-        .andExpect(status().isOk());
+        .andExpect(status().isOk())
+        .andExpect(jsonPath("$.msg").exists());
   }
 }
