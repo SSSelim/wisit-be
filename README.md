@@ -1,5 +1,7 @@
 # Wisit
 
+[![Build Status](https://travis-ci.org/SSSelim/wisit-be.svg?branch=master)](https://travis-ci.org/SSSelim/wisit-be)
+
 It is a simple cultural puzzle game, shortened of 'Where is it'?
 
 ## Heroku
