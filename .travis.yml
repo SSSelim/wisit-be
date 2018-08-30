@@ -1,0 +1,4 @@
+language: java
+
+# Could not transfer artifact xyz from/to central (xyz): Access denied to: xyz
+sudo: required
